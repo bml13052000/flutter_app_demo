@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/id_cart.dart';
 int count=0;
 void main() {
   runApp(MaterialApp(
-    home: Home()
+    home: identityCard()
   ));
 }
 
