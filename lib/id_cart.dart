@@ -11,7 +11,7 @@ class identityCard extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.deepOrange[100],
       appBar: AppBar(
-        title: Text("COSMOTARS",
+        title: Text("COMPANY",
         style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
@@ -44,7 +44,8 @@ class identityCard extends StatelessWidget {
                       SizedBox(height: 10),
 
                     Text(
-                      "Simmi Alok",
+                      "Baivab M",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -85,9 +86,13 @@ class identityCard extends StatelessWidget {
                   flex: 1,
                   child: Container(
                     //alignment: Alignment.center,
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(5),
                     color: Colors.deepOrange[100],
-                    child: Image.asset("Assets/Avatar.jpg")
+                    child: Image.asset("Assets/Avatar_male.jpg",
+                      // width: 75,
+                      // height: 100,
+
+                    )
                   ),
                 )
               ],
@@ -165,14 +170,14 @@ class identityCard extends StatelessWidget {
                   Icon(
                     Icons.email,
                   ),
-                  Text("aloksimmi@cosmotars.art",
+                  Text("maulikbaivab@company.com",
                     style: TextStyle(
                       fontSize: 17
                     ),
 
                   ),
 
-                  SizedBox(width: 40,),
+                  SizedBox(width: 20,),
 
                   Icon(
                     Icons.phone,
