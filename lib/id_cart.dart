@@ -88,15 +88,18 @@ class identityCard extends StatelessWidget {
                     //alignment: Alignment.center,
                     padding: EdgeInsets.all(5),
                     color: Colors.deepOrange[100],
-                    child: Image.asset("Assets/Avatar_male.jpg",
-                      // width: 75,
-                      // height: 100,
-
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("Assets/Avatar_male.jpg"),
+                      radius: 40,
                     )
                   ),
                 )
               ],
             ),
+          /*    Divider(
+                height: 20,
+                color: Colors.grey[600],
+              ),*/
               Row(
                 children: [
                   Expanded(
