@@ -3,8 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 // ignore: camel_case_types
-class identityCard extends StatelessWidget {
+class identityCard extends StatefulWidget {
   const identityCard({Key key}) : super(key: key);
+
+  @override
+  _identityCardState createState() => _identityCardState();
+}
+
+class _identityCardState extends State<identityCard> {
+
+  int rank = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +29,27 @@ class identityCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.deepOrange[100],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            rank=rank+1;
+          });
+        },
+        child: Icon(
+          Icons.add,
+          color: Colors.grey[800],
+
+        ),
+        backgroundColor: Colors.deepOrange[100],
+      ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 150,horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 180,horizontal: 10),
         child: Container(
           color: Colors.deepOrange[100],
           child: Column(
             children:[ Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
                   flex: 1,
@@ -44,7 +67,7 @@ class identityCard extends StatelessWidget {
                       SizedBox(height: 10),
 
                     Text(
-                      "Baivab M",
+                      "Ramkumar",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -101,6 +124,8 @@ class identityCard extends StatelessWidget {
                 color: Colors.grey[600],
               ),*/
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
                     flex: 1,
@@ -110,7 +135,7 @@ class identityCard extends StatelessWidget {
                       color: Colors.deepOrange[100],
                       child: Column(
                           children: [
-                            SizedBox(height: 10,),
+                            // SizedBox(height: 10,),
                           Text(
                             "ADDRESS",
                             style: TextStyle(
@@ -121,7 +146,7 @@ class identityCard extends StatelessWidget {
                             SizedBox(height: 10),
 
                             Text(
-                              "308 Negra Arroyo Lane, Albuquerque, New Mexico",
+                              "Austin, Texas",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -137,7 +162,7 @@ class identityCard extends StatelessWidget {
                     flex: 1,
                     child: Container(
                       alignment: Alignment.center,
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(5),
                       color: Colors.deepOrange[100],
                       child: Column(
                           children: [
@@ -151,7 +176,36 @@ class identityCard extends StatelessWidget {
                             SizedBox(height: 10),
 
                             Text(
-                              "Chief Executive Officer(CEO)",
+                              "Intern",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ]
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(10),
+                      color: Colors.deepOrange[100],
+                      child: Column(
+                          children: [
+                            Text(
+                              "RANK",
+                              style: TextStyle(
+                                  letterSpacing: 2
+                              ),
+                            ),
+
+                            SizedBox(height: 10),
+
+                            Text(
+                              "$rank",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -168,6 +222,8 @@ class identityCard extends StatelessWidget {
               ),
               SizedBox(height: 10,),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(width: 10,),
                   Icon(
